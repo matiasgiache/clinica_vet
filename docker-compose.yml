@@ -9,7 +9,7 @@ services:
     environment:
       DB_URL: jdbc:mysql://clinica_vet:3306/clinica_veterinaria?createDatabaseIfNotExist=true&serverTimezone=UTC
       DB_USER_NAME: root
-      DB_PASSWORD: 1234
+      DB_PASSWORD: root
     restart: always
     depends_on:
       clinica_vet:
@@ -19,8 +19,8 @@ services:
     ports:
       - "3307:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
       MYSQL_DATABASE: clinica_veterinaria
     restart: always
     healthcheck:
